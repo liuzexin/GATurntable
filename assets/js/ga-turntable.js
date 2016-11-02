@@ -16,13 +16,10 @@ $.fn.animateRotate = function(angle, duration, easing, complete) {
 };
 
 $(document).ready(function(){
-    //纯随机不做手脚
     $('.ga-pointer').click(function(){
         $('.ga-turntable').animateRotate(6000,5000,'swing',function(){
-            console.log('123123');
         });
         $('.ga-pointer').animateRotate(-6000,5000,'swing',function(){
-
         });
     });
 });

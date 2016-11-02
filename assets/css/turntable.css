@@ -49,12 +49,3 @@
   -ms-transform: none;
   transform: none;
 }
-
-@-moz-keyframes rotateInfinite {
-  0%{-moz-transform:rotate(0deg)}
-  0%{-moz-transform:rotate(0deg)}
-}
-
-.ga-rotate{
-
-}
