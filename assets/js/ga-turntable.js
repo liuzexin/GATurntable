@@ -14,12 +14,3 @@ $.fn.animateRotate = function(angle, duration, easing, complete) {
         $({deg: 0}).animate({deg: angle}, args);
     });
 };
-
-$(document).ready(function(){
-    $('.ga-pointer').click(function(){
-        $('.ga-turntable').animateRotate(6000,5000,'swing',function(){
-        });
-        $('.ga-pointer').animateRotate(-6000,5000,'swing',function(){
-        });
-    });
-});
