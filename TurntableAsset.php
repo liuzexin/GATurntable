@@ -6,7 +6,7 @@
  * Time: 下午4:21
  */
 
-namespace gaturntable;
+namespace ga\turntable;
 
 use yii\web\AssetBundle;
 

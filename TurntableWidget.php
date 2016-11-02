@@ -1,6 +1,6 @@
 <?php
 
-namespace gaturntable;
+namespace ga\turntable;
 
 use yii\base\Widget;
 

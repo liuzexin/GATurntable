@@ -5,7 +5,7 @@
  * Date: 16/10/31
  * Time: 下午4:24
  */
-use gaturntable\TurntableAsset;
+use ga\turntable\TurntableAsset;
 TurntableAsset::register($this);
 ?>
 <div class="ga-turntable-bg">
