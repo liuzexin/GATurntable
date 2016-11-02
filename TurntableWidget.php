@@ -15,6 +15,6 @@ class TurntableWidget extends Widget{
 
     function getViewPath()
     {
-        return '@vendor/assets';
+        return dirname(__FILE__).DIRECTORY_SEPARATOR.'assets';
     }
 }

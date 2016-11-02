@@ -12,7 +12,6 @@ use yii\web\AssetBundle;
 
 class TurntableAsset extends  AssetBundle
 {
-    public $sourcePath = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'assets';
     public $css = [
       'css/turntable.css'
     ];
@@ -25,4 +24,9 @@ class TurntableAsset extends  AssetBundle
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
     ];
+    public function init()
+    {
+        $this->sourcePath = dirname(__FILE__).DIRECTORY_SEPARATOR.'assets';
+        parent::init();
+    }
 }
