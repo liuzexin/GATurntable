@@ -22,11 +22,14 @@ class TurntableWidget extends Widget{
      * */
     public $pointerImagePath = 'image/pointer.png'; //650 * 600
     public $turntableImagePath = 'image/turntable.png';//450 * 450
-    public $turntableBGImagePath = 'image/turntable-bg.png';//228 * 228
+    public $turntableBGImagePath = 'image/turntable-bg.jpg';//228 * 228
 
     public function run()
     {
         $view = $this->getView();
+        $js[] = "$('.ga-pointer').css('background','url($this->pointerImagePath) no-repeat center');";
+        $js[] = "$('.ga-turntable-bg').css('background','url($this->turntableBGImagePath) no-repeat center');";
+        $js[] = "$('.ga-turntable').css('background','url($this->turntableImagePath) no-repeat center');";
         $js[] = "$(document).ready(function(){";
         $js[] = "$('.ga-pointer').click(function(){";
         if($this->scrollType == self::TURNTABLE_SCROLL){
