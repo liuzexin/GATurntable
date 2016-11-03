@@ -20,3 +20,7 @@ The configuartion is very easy,we can set the public property:
 * `$pointerImagePath` custom pointer image path
 * `$turntableImagePath` custom turntable image path
 * `$turntableBGImagePath` custom turntable background image path
+
+#How to install
+
+`composer require ga/turntable dev-master`
