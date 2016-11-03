@@ -11,7 +11,7 @@ class TurntableWidget extends Widget{
     const TURNTABLE_SCROLL = 'TURNTABLE_SCROLL';
     public $deg = 6000;
     public $scrollType = self::POINTER_SCROLL;
-    public $animateTime = 5000;//microseconds not seconds;
+    public $animationTime = 5000;//microseconds not seconds;
     public $pointerCallback = null ;//important JS callback code here.If the pointer complete animation will trigger this function.
     public $turntableCallback = null;//important JS callback code here.If the turntable complete animation will trigger this function.
 
