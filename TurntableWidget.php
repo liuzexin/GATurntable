@@ -17,7 +17,7 @@ class TurntableWidget extends Widget{
 
     /*
      * !Very important!
-     * In order to better UE,please accroding to the given image scale to design your image, except pointer image size.
+     * In order to better UE,please according to the given image scale to design your image, except pointer image size.
      *
      * */
     public $pointerImagePath = 'image/pointer.png'; //650 * 600
