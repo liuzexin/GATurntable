@@ -27,23 +27,27 @@ class TurntableWidget extends Widget{
     public function run()
     {
         $view = $this->getView();
-        $js[] = "$('.ga-pointer').css('background','url($this->pointerImagePath) no-repeat center');";
-        $js[] = "$('.ga-turntable-bg').css('background','url($this->turntableBGImagePath) no-repeat center');";
-        $js[] = "$('.ga-turntable').css('background','url($this->turntableImagePath) no-repeat center');";
-        $js[] = "$(document).ready(function(){";
-        $js[] = "$('.ga-pointer').click(function(){";
         if($this->scrollType == self::TURNTABLE_SCROLL){
             $callback = $this->turntableCallback?$this->turntableCallback:'null';
-            $js[] = "$('.ga-turntable').animateRotate($this->deg,$this->animateTime,'swing',$callback);";
-            $js[] = "$('.ga-pointer').animateRotate(-$this->deg,$this->animateTime,'swing');";
+            $clickJS = <<<JS
+                jQuery('.ga-turntable').animateRotate({$this->deg},{$this->animationTime},'swing',$callback);
+                jQuery('.ga-pointer').animateRotate({$this->deg},{$this->animationTime},'swing');
+JS;
         }else{
             $callback = $this->pointerCallback?$this->pointerCallback:'null';
-            $js[] = "$('.ga-pointer').animateRotate($this->deg,$this->animateTime,'swing',$callback);";
+            $clickJS = <<<JS
+                jQuery('.ga-pointer').animateRotate({$this->deg},{$this->animationTime},'swing',$callback);
+JS;
         }
-
-        $js[] = "}); });";
-        $jsCode = implode(' ',$js);
-        $view->registerJS($jsCode);
+        $js=<<<JS
+$('.ga-pointer').css('background','url({$this->pointerImagePath}) no-repeat center');
+$('.ga-turntable-bg').css('background','url({$this->turntableBGImagePath}) no-repeat center');
+$('.ga-turntable').css('background','url({$this->turntableImagePath}) no-repeat center');
+$(document).ready(function(){ $('.ga-pointer').click(function(){
+{$clickJS}
+});});
+JS;
+        $view->registerJS($js);
         return $this->render('turntable');
     }
 
