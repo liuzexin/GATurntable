@@ -9,10 +9,13 @@ A turntable for lottery activity.
 
 ![turntable.gif](https://github.com/liuzexin/Image/blob/master/turntable.gif)
 
+#How to install
+
+`composer require ga/turntable dev-master`
+
 #How to useage
 In the view file you should include following code:
 ```PHP
-
 <?php
 use ga\turntable\TurntableWidget;
 use ga\turntable\TurntableAsset;
@@ -33,7 +36,5 @@ The configuartion is very easy,we can set the public property:
 * `$turntableBGImagePath` custom turntable background image path
 
 
-#How to install
 
-`composer require ga/turntable dev-master`
 
