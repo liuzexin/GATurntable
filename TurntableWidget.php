@@ -31,7 +31,7 @@ class TurntableWidget extends Widget{
             $callback = $this->turntableCallback?$this->turntableCallback:'null';
             $clickJS = <<<JS
 jQuery('.ga-turntable').animateRotate({$this->deg},{$this->animationTime},'swing',$callback);
-jQuery('.ga-pointer').animateRotate({$this->deg},{$this->animationTime},'swing');
+jQuery('.ga-pointer').animateRotate(-{$this->deg},{$this->animationTime},'swing');
 JS;
         }else{
             $callback = $this->pointerCallback?$this->pointerCallback:'null';

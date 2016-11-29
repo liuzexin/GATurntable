@@ -9,7 +9,18 @@ A turntable for lottery activity.
 
 ![turntable.gif](https://github.com/liuzexin/Image/blob/master/turntable.gif)
 
-#Other configuration
+#How to useage
+In the view file you should include following code:
+```PHP
+
+<?php
+use ga\turntable\TurntableWidget;
+use ga\turntable\TurntableAsset;
+TurntableAsset::register($this);
+?>
+<?= TurntableWidget::widget(['scrollType'=>TurntableWidget::TURNTABLE_SCROLL])?>
+```
+#Configuration params
 
 The configuartion is very easy,we can set the public property:
 * `$deg` animate degree
@@ -21,6 +32,8 @@ The configuartion is very easy,we can set the public property:
 * `$turntableImagePath` custom turntable image path
 * `$turntableBGImagePath` custom turntable background image path
 
+
 #How to install
 
 `composer require ga/turntable dev-master`
+
