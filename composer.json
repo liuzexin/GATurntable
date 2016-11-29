@@ -1,6 +1,7 @@
 {
   "name": "ga/turntable",
-  "description": "desc",
+  "description": "yii2-turntable",
+  "keywords":["yii2","turntable","widget"],
   "license": "null",
   "authors": [
     {
