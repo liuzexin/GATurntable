@@ -1,21 +1,21 @@
 # GATurntable
 A turntable for lottery activity.
 
-#The GATurntable has two scroll types.
+# The GATurntable has two scroll types.
 
-##1.POINTER_SCROLL
+## 1.POINTER_SCROLL
 
 ![pointer.gif](https://github.com/liuzexin/Image/blob/master/pointer.gif)
 
-##2.TURNTABLE_SCROLL
+## 2.TURNTABLE_SCROLL
 
 ![turntable.gif](https://github.com/liuzexin/Image/blob/master/turntable.gif)
 
-#How to install
+# How to install
 
 `composer require ga/turntable dev-master`
 
-#How to useage
+# How to useage
 
 In the view file you should include following code:
 ```PHP
@@ -27,7 +27,7 @@ TurntableAsset::register($this);
 <?= TurntableWidget::widget(['scrollType'=>TurntableWidget::TURNTABLE_SCROLL])?>
 ```
 
-#Configuration params
+# Configuration params
 
 The configuartion is very easy,we can set the public property:
 * `$deg` animate degree
